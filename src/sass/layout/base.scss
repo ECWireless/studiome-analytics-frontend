@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+::selection {
+    background: $color-teal-dark;
+    color: white;
+  }
+
+::-moz-selection {
+    background: $color-teal-dark;
+    color: white;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px
+}
+
+body {
+    font-family: $font-main;
+    font-size: 1.8rem;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 45rem 45rem 1fr;
+    grid-template-rows: 12rem 30rem 40rem 20rem;
+    gap: 2rem;
+
+    &__heading {
+        grid-column: 2 / 4;
+        grid-row: 1 / 2;
+        align-self: center;
+
+        text-align: center;
+        color: $color-grey-dark;
+    }
+}

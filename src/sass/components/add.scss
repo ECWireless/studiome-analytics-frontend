@@ -1,0 +1,93 @@
+.add {
+    grid-column: 2 / 4;
+    grid-row: 4 / 5;
+
+    border: 2px solid $color-teal;
+    box-shadow: $shadow-medium;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5rem auto;
+
+    &__heading {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        align-self: flex-end;
+
+        border-bottom: .5px solid $color-grey-mild;
+        padding-bottom: 1rem;
+
+        text-align: center;
+        color: $color-grey-dark;
+    }
+
+    &__form {
+        grid-column: 1 / -1;
+        grid-row: 2 / -1;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    &__name-heading {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        align-self: center;
+        justify-self: flex-end;
+    }
+
+    &__name {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        align-self: center;
+        justify-self: center;
+
+        width: 20rem;
+        height: 4rem;
+
+        outline: none;
+        border: 1px solid $color-teal;
+        color: $color-grey;
+        border-radius: 5px;
+
+        &:active,
+        &:focus {
+            border: 1px solid $color-orange;
+        }
+    }
+
+    &__button {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+        justify-self: flex-start;
+        align-self: center;
+
+        width: 4rem;
+        height: 4rem;
+
+        background: $color-green;
+        border: none;
+        outline: none;
+        border-radius: 50%;
+        box-shadow: $shadow-button;
+        color: $color-white;
+        padding-bottom: .2rem;
+        padding-left: .2rem;
+
+        font-weight: 600;
+        font-size: 2.4rem;
+
+        transition: .3s all ease;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $color-grey-light;
+            color: $color-green;
+        }
+
+        &:active {
+            box-shadow: none;
+        }
+    }
+}

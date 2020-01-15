@@ -1,0 +1,138 @@
+.test {
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+
+    border: 2px solid $color-teal;
+    box-shadow: $shadow-medium;
+    overflow: scroll;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5rem 8rem 5rem auto;
+
+    &__heading {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        align-self: flex-end;
+
+        border-bottom: .5px solid $color-grey-mild;
+        padding-bottom: 1rem;
+
+        text-align: center;
+        color: $color-grey-dark;
+    }
+
+    &__points-heading {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        align-self: center;
+
+        text-align: center;
+    }
+
+    &__points {
+        grid-column: 1 / 2;
+        grid-row: 3 / -1;
+
+        list-style: none;
+        padding: 1.5rem;
+    }
+
+    &__item {
+        display: inline-block;
+        margin: 12px;
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px solid $color-green;
+        box-shadow: $shadow-small;
+        color: $color-teal;
+
+        transition: .3s all ease;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: $shadow-medium;
+        }
+    }
+
+    &__item--active {
+        display: inline-block;
+        margin: 12px;
+        padding: 10px;
+
+        background: $color-orange;
+        border-radius: 4px;
+        border: 1px solid $color-orange;
+        box-shadow: $shadow-small;
+        color: $color-white;
+
+        transition: .3s all ease;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: $shadow-medium;
+        }
+    }
+
+    &__date-heading {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        align-self: center;
+
+        text-align: center;
+    }
+
+    &__date {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+        justify-self: center;
+
+        width: 20rem;
+        height: 4rem;
+
+        outline: none;
+        border: 1px solid $color-teal;
+        color: $color-grey;
+        border-radius: 5px;
+        padding-left: 1.5rem;
+
+        &:active,
+        &:focus {
+            border: 1px solid $color-orange;
+        }
+    }
+
+    &__button {
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+        justify-self: center;
+
+        width: 10rem;
+        height: 3rem;
+        margin-top: 2rem;
+
+        display: inline-block;
+        background: $color-green;
+        border: none;
+        outline: none;
+        
+        border-radius: 5px;
+        box-shadow: $shadow-button;
+        color: $color-white;
+
+        font-weight: 600;
+        font-size: 1.2rem;
+
+        transition: .3s all ease;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $color-grey-light;
+            color: $color-green;
+        }
+
+        &:active {
+            box-shadow: none;
+        }
+    }
+}
