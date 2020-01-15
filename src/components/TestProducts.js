@@ -12,13 +12,17 @@ class TestProducts extends Component {
     }
 
     submitPressureTest = () => {
-        this.props.addImpressionQuery({
-            variables: {
-                date: this.state.date,
-                productId: this.state.productId,
-            },
-            refetchQueries: [{ query: getProductsQuery }]
-        });
+        if (this.state.date == null || this.state.productId == null) {
+            return;
+        } else {
+            this.props.addImpressionQuery({
+                variables: {
+                    date: this.state.date,
+                    productId: this.state.productId,
+                },
+            });
+            window.location.reload(false);
+        }
     }
 
     displayProducts = () => {
