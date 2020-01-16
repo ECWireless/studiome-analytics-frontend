@@ -5,10 +5,11 @@
     border: 2px solid $color-teal;
     box-shadow: $shadow-medium;
     overflow: scroll;
+    border-radius: 10px;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 5rem 8rem 5rem auto;
+    grid-template-rows: 5rem 8rem 5rem 5rem auto;
 
     &__heading {
         grid-column: 1 / -1;
@@ -103,6 +104,40 @@
     }
 
     &__button {
+        grid-column: 2 / 3;
+        grid-row: 5 / 6;
+        justify-self: center;
+
+        width: 10rem;
+        height: 3rem;
+        margin-top: 2rem;
+
+        display: inline-block;
+        background: $color-green;
+        border: none;
+        outline: none;
+        
+        border-radius: 5px;
+        box-shadow: $shadow-button;
+        color: $color-white;
+
+        font-weight: 600;
+        font-size: 1.2rem;
+
+        transition: .3s all ease;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $color-grey-light;
+            color: $color-green;
+        }
+
+        &:active {
+            box-shadow: none;
+        }
+    }
+
+    &__button-2 {
         grid-column: 2 / 3;
         grid-row: 4 / 5;
         justify-self: center;

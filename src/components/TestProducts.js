@@ -11,6 +11,13 @@ class TestProducts extends Component {
         productId: null,
     }
 
+    onTodaysDate = () => {
+        this.setState({
+            ...this.state,
+            date: new Date().toISOString().slice(0, 10),
+        })
+    }
+
     submitPressureTest = () => {
         if (this.state.date == null || this.state.productId == null) {
             return;
@@ -58,6 +65,7 @@ class TestProducts extends Component {
                     className="test__date"
                 />
                 <button onClick={this.submitPressureTest} className="test__button">Submit</button>
+                <button onClick={this.onTodaysDate} className="test__button-2">Today's Date</button>
             </div>
         )
     }

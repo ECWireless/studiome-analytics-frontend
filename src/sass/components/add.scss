@@ -8,6 +8,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 5rem auto;
+    border-radius: 10px;
 
     &__heading {
         grid-column: 1 / -1;
