@@ -35,7 +35,7 @@ class ProductList extends Component {
         return (
             <div className="list">
                 <div className="list__container">
-                    <h3 className="list__heading">Check Pressure Points:</h3>
+                    <h3 className="list__heading">Select a Pressure Point:</h3>
                     <ul className="list__list">
                         {this.displayProducts()}
                     </ul>

@@ -46,7 +46,7 @@
         margin: 1rem 0;
     }
 
-    &__total-heading {
+    &__total-headings {
         grid-column: 2 / 3;
         grid-row: 2 / 3;
         align-self: center;
@@ -59,15 +59,15 @@
         grid-row: 3 / 4;
 
         margin: 0 auto;
-        width: 5rem;
-        height: 5rem;
-        border-radius: 50%;
-        background: $color-teal;
-        box-shadow: $shadow-dark;
+        // width: 5rem;
+        // height: 5rem;
+        // border-radius: 50%;
+        // background: $color-teal;
+        // box-shadow: $shadow-dark;
 
         text-align: center;
         font-weight: bold;
-        color: $color-white;
+        color: $color-teal;
         font-size: 3.2rem;
         padding-top: .4rem;
     }

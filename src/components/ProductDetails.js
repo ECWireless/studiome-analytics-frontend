@@ -21,7 +21,10 @@ class ProductDetails extends Component {
                             })
                         }
                     </ul>
-                    <p className="details__total-heading">Total Impressions:</p>
+                    <div className="details__total-headings">
+                        <p>Total Impressions:</p>
+                        <p>(since January)</p>
+                    </div>
                     <div className="details__total">{product.impressions.length}</div>
                 </React.Fragment>
             )

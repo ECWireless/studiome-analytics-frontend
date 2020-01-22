@@ -13,15 +13,19 @@ class AddProduct extends Component {
     submitForm = (e) => {
         e.preventDefault();
         
-        if (this.state.name == null) {
+        if (this.state.name == null || this.state.name === "") {
             return;
         } else {
-            this.props.addProductQuery({
-                variables: {
-                    name: this.state.name,
-                },
-                refetchQueries: [{ query: getProductsQuery }]
-            });
+            if (this.state.name.slice(0,1) === " ") {
+                return;
+            } else {
+                this.props.addProductQuery({
+                    variables: {
+                        name: this.state.name,
+                    },
+                    refetchQueries: [{ query: getProductsQuery }]
+                });
+            }
         }
     }
 
