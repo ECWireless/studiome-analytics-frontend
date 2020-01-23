@@ -11,6 +11,13 @@
 
     overflow: scroll;
 
+    @include respond(tab-port) {
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+
+        grid-template-rows: 1fr 1fr;
+    }
+
     &__heading {
         grid-column: 1 / -1;
         grid-row: 1 / 2;

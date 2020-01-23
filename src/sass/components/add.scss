@@ -10,6 +10,13 @@
     grid-template-rows: 5rem auto;
     border-radius: 10px;
 
+    @include respond(tab-port) {
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+
+        grid-template-rows: 1fr 1fr;
+    }
+
     &__heading {
         grid-column: 1 / -1;
         grid-row: 1 / 2;

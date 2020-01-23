@@ -1,9 +1,17 @@
 .list {
     grid-column: 2 / 4;
-    grid-row: 2 / 3;
+    grid-row: 2 / 4;
 
     display: grid;
     grid-template-columns: 1fr 2rem 1fr;
+    grid-template-rows: 1fr;
+
+    @include respond(tab-port) {
+        grid-column: 2 / 3;
+
+        grid-template-rows: 1fr 1fr;
+        gap: 2rem;
+    }
 
     &__container {
         grid-column: 1 / 2;
@@ -15,6 +23,10 @@
         display: grid;
         grid-template-rows: 5rem auto;
         overflow: scroll;
+
+        @include respond(tab-port) {
+            grid-column: 1 / -1;
+        }
     }
 
     &__heading {
