@@ -33,6 +33,7 @@ class AddProduct extends Component {
         return (
             <div className="add">
                 <h3 className="add__heading">Add a Pressure Point:</h3>
+                <div className="add__line" />
                 <form className="add__form" onSubmit={this.submitForm.bind(this)}>
                     <label className="add__name-heading">Name:</label>
                     <input className="add__name" type="text" onChange={(e) => this.setState({ name: e.target.value })} />

@@ -1,46 +1,41 @@
 .list {
-    grid-column: 2 / 4;
-    grid-row: 2 / 4;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    border: 2px solid $color-teal;
+    box-shadow: $shadow-medium;
 
     display: grid;
-    grid-template-columns: 1fr 2rem 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5rem 1rem 1rem auto;
+    border-radius: 10px;
+
+    overflow: scroll;
 
     @include respond(tab-port) {
         grid-column: 2 / 3;
-
-        grid-template-rows: 1fr 1fr;
-        gap: 2rem;
-    }
-
-    &__container {
-        grid-column: 1 / 2;
-
-        border: 2px solid $color-teal;
-        box-shadow: $shadow-medium;
-        border-radius: 10px;
-
-        display: grid;
-        grid-template-rows: 5rem auto;
-        overflow: scroll;
-
-        @include respond(tab-port) {
-            grid-column: 1 / -1;
-        }
+        grid-row: 2 / 3;
     }
 
     &__heading {
+        grid-column: 1 / -1;
         grid-row: 1 / 2;
-        align-self: flex-end;
+        align-self: center;
 
-        border-bottom: .5px solid $color-grey-mild;
-        padding-bottom: 1rem;
         text-align: center;
         color: $color-grey-dark;
     }
 
-    &__list {
+    &__line {
+        grid-column: 1 / -1;
         grid-row: 2 / 3;
+        
+        border-bottom: .5px solid $color-grey-mild;
+    }
+
+    &__list {
+        grid-column: 1 / -1;
+        grid-row: 4 / 5;
         list-style: none;
         padding: 1.5rem;
     }

@@ -7,14 +7,12 @@
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 5rem auto;
+    grid-template-rows: 5rem 1rem auto;
     border-radius: 10px;
 
     @include respond(tab-port) {
         grid-column: 2 / 3;
         grid-row: 4 / 5;
-
-        grid-template-rows: 1fr 1fr;
     }
 
     &__heading {
@@ -22,20 +20,33 @@
         grid-row: 1 / 2;
         align-self: flex-end;
 
-        border-bottom: .5px solid $color-grey-mild;
         padding-bottom: 1rem;
 
         text-align: center;
         color: $color-grey-dark;
     }
 
+    &__line {
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+        border-bottom: .5px solid $color-grey-mild;
+    }
+
     &__form {
         grid-column: 1 / -1;
-        grid-row: 2 / -1;
+        grid-row: 3 / -1;
 
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr;
+
+        @include respond(tab-port) {
+            grid-template-columns: 1fr 2fr 1fr;
+        }
+
+        @include respond(phone) {
+            grid-template-columns: 1fr 3fr 1fr;
+        }
     }
 
     &__name-heading {
@@ -62,6 +73,11 @@
         &:active,
         &:focus {
             border: 1px solid $color-orange;
+        }
+
+        @include respond(tab-port) {
+            width: 18rem;
+            height: 4rem;
         }
     }
 

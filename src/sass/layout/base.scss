@@ -46,7 +46,7 @@ body {
 
     @include respond(phone) {
         grid-template-columns: 1fr 35rem 1fr;
-        grid-template-rows: 12rem 40rem 40rem 20rem 5rem;
+        grid-template-rows: 8rem 40rem 40rem 20rem 5rem;
         gap: 2rem;
     }
 
@@ -60,6 +60,7 @@ body {
 
         @include respond(tab-port) {
             grid-column: 2 / 3;
+            margin-bottom: -2rem;
         }
     }
 }

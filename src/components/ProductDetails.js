@@ -13,6 +13,7 @@ class ProductDetails extends Component {
             return(
                 <React.Fragment>
                     <h3 className="details__heading">{product.name}</h3>
+                    <div className="details__line" />
                     <p className="details__impressions-heading">All impressions by this pressure point:</p>
                     <ul className="details__impressions">
                         {
