@@ -45,7 +45,7 @@ body {
     }
 
     @include respond(phone) {
-        grid-template-columns: 1fr 35rem 1fr;
+        grid-template-columns: 1fr 32rem 1fr;
         grid-template-rows: 8rem 40rem 40rem 20rem 5rem;
         gap: 2rem;
     }
