@@ -24,14 +24,25 @@ class App extends Component {
         if (data.loading) {
             return( <div>Loading products...</div>);
         } else {
-            return data.products.map(product => {
+            const products = data.products.map(count => {
+                return {
+                    id: count.id,
+                    name: count.name,
+                    count: count.impressions.length
+                }
+            })
+
+            let sortedProducts = products.sort((a, b) => (a.count > b.count) ? -1 : 1)
+            console.log(sortedProducts)
+
+            return sortedProducts.map((product, index) => {
                 return (
                     <li
                         key={product.id}
                         onClick={(e) => {this.setState({selected: product.id})}}
                         className={product.id === this.state.selected ? "list__item--active" : "list__item"}
                     >
-                        { product.name }
+                        <span style={{marginRight: '10px', color: "#8DCBC0"}}>{index + 1})</span>{ product.name }
                     </li>
                 )
             })

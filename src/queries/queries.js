@@ -5,6 +5,9 @@ const getProductsQuery = gql`
         products {
             id
             name
+            impressions {
+                date
+            }
         }
     }
 `
